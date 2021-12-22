@@ -2,5 +2,13 @@
     name = cygnu
     email = crucia8@icloud.com
 
+[alias]
+    br = branch
+    cm = commit
+    co = checkout
+    graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+    sh = stash
+    st = status
+
 [init]
     defaultBranch = main
