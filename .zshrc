@@ -33,6 +33,16 @@ setopt hist_expand
 autoload -Uz compinit
 compinit
 
+# peco
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
+
 # alias
 alias vi="nvim"
 alias vim="nvim"
