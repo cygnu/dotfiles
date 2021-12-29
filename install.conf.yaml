@@ -1,0 +1,19 @@
+# install.conf.yaml for dotbot https://github.com/anishathalye/dotbot
+- defaults:
+    link:
+        create: true
+        relink: true
+        force:  true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim/init.vim: .config/nvim/init.vim
+    ~/.config/.cache/dein.toml: .config/.cache/dein.toml
+    ~/.config/.cache/dein_lazy.toml: .config/.cache/dein_lazy.toml
+    ~/.config/starship.toml: .config/starship.toml
+    ~/.zshenv: zsh/.zshenv
+    ~/.zshrc: zsh/.zshrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
