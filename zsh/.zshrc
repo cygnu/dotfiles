@@ -63,5 +63,8 @@ if [[ $(command -v exa) ]]; then
   alias l='clear && ls'
 fi
 
+# Export a path to nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # Pass the starship
 eval "$(starship init zsh)"
