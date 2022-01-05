@@ -69,5 +69,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # Export a path to pyenv
 eval "$(pyenv init -)"
 
+# Export a path to rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+
 # Pass the starship
 eval "$(starship init zsh)"
