@@ -4,7 +4,7 @@ if &compatible
 endif
 
 " プラグインがインストールされるディレクトリ
-let s:dein_dir = expand('~/.cache/dein')
+let s:dein_dir      = expand('~/.cache/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 if &runtimepath !~# '/dein.vim'
@@ -15,9 +15,9 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 " 管理するプラグインを記述したファイル
-let s:toml_dir=expand('~/.dein/')
-let s:toml=s:toml_dir . 'dein.toml'
-let s:toml_lazy=s:toml_dir . 'dein-lazy.toml'
+let s:toml_dir  = expand('~/.dein/')
+let s:toml      = s:toml_dir . 'dein.toml'
+let s:toml_lazy = s:toml_dir . 'dein-lazy.toml'
 
 " プラグインの追加
 if dein#load_state(s:dein_dir)
@@ -33,7 +33,7 @@ endif
 " Required:
 " ファイルタイプを一旦無効化し、最後に有効にする
 filetype plugin indent on
-syntax enable
+syntax enable             " シンタックスハイライト
 
 set bg=dark
 
@@ -45,95 +45,44 @@ if dein#check_install()
 endif
 "End dein Scripts------------------------
 
-" 挿入モードでバックスペースで削除できるようにする
-set backspace=indent,eol,start
-
 "----------------------------------------
 " 検索
 "----------------------------------------
-" 検索結果をハイライト表示
-set hlsearch
-
-" 検索するときに大文字小文字を区別しない
-set ignorecase
-
-" インクリメンタル検索 (検索ワードの最初の文字を入力した時点で検索が開始)
-set incsearch
-
-" 小文字で検索すると大文字と小文字を無視して検索
-set smartcase
-
-" 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
-set wrapscan
+set hlsearch   " 検索結果をハイライト表示
+set ignorecase " 検索するときに大文字小文字を区別しない
+set incsearch  " インクリメンタル検索 (検索ワードの最初の文字を入力した時点で検索が開始)
+set smartcase  " 小文字で検索すると大文字と小文字を無視して検索
+set wrapscan   " 検索がファイル末尾まで進んだら、ファイル先頭から再び検索
 
 "----------------------------------------
 " 表示設定
 "----------------------------------------
-" コメントの色を水色
-hi Comment ctermfg=3
+hi Comment ctermfg=3            " コメントの色を水色
+set backspace=indent,eol,start  " 挿入モードでバックスペースで削除できるようにする
+set cursorline                  " カーソルラインハイライト
+set laststatus=2                " ステータス行を常に表示
+set list                        " 不可視文字を表示する
+set listchars=tab:^\ ,trail:~   " 行末のスペースを可視化
+set noerrorbells                " エラーメッセージの表示時にビープを鳴らさない
+set number                      " 行番号を表示
+set shiftwidth=2                " インデント幅
+set showmatch                   " 対応する括弧を強調表示
+set showmatch matchtime=1       " 対応する括弧やブレースを表示
+set title                       " タイトルを表示
+set whichwrap=b,s,h,l,<,>,[,],~ " 行をまたいで移動
+set wildmenu                    " コマンドライン補完
 
-" カーソルラインハイライト
-set cursorline
+" Tab
+set expandtab     " 入力モードでTabキー押下時に半角スペースを挿入
+set smartindent   " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
+set softtabstop=2 " Tabキー押下時に挿入される文字幅を指定
+set tabstop=2     " ファイル内にあるタブ文字の表示幅
 
-" 入力モードでTabキー押下時に半角スペースを挿入
-set expandtab
-
-" ステータス行を常に表示
-set laststatus=2
-
-" 不可視文字を表示する
-set list
-
-" 行末のスペースを可視化
-set listchars=tab:^\ ,trail:~
-
-" エラーメッセージの表示時にビープを鳴らさない
-set noerrorbells
-
-" 行番号を表示
-set number
-
-" インデント幅
-set shiftwidth=2
-
-" 対応する括弧を強調表示
-set showmatch
-
-" 対応する括弧やブレースを表示
-set showmatch matchtime=1
-
-" 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
-set smartindent
-
-" Tabキー押下時に挿入される文字幅を指定
-set softtabstop=2
-
-" ファイル内にあるタブ文字の表示幅
-set tabstop=2
-
-" タイトルを表示
-set title
-
-" 行をまたいで移動
-set whichwrap=b,s,h,l,<,>,[,],~
-
-" コマンドライン補完
-set wildmenu
-
-" シンタックスハイライト
-syntax on
-
-" 上部に表示される情報を非表示
-let g:netrw_banner=0
-
-" 表示形式をTreeViewに変更
-let g:netrw_liststyle=3
-
-" 左右分割を右側に開く
-let g:netrw_altv=1
-
-" 分割で開いたときに85%のサイズで開く
-let g:netrw_winsize=85
+syntax on               " シンタックスハイライト
+let g:netrw_banner=0    " 上部に表示される情報を非表示
+let g:netrw_liststyle=3 " 表示形式をTreeViewに変更
+let g:netrw_altv=1      " 左右分割を右側に開く
+let g:netrw_winsize=85  " 分割で開いたときに85%のサイズで開く
 
 " 挿入モードでカーソルの形状を変える
 if &term =~ "screen"
