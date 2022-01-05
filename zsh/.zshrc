@@ -46,6 +46,14 @@ if [[ $(command -v exa) ]]; then
   alias l='clear && ls'
 fi
 
+# Setup GOPATH
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# Export a path to GOROOT
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOROOT/bin
+
 # Export a path to nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
