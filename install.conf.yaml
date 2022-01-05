@@ -13,6 +13,7 @@
     ~/.config/.cache/dein_lazy.toml: .config/.cache/dein_lazy.toml
     ~/.config/starship.toml: .config/starship.toml
     ~/.zshenv: zsh/.zshenv
+    ~/.zprofile: zsh/.zprofile
     ~/.zshrc: zsh/.zshrc
 
 - shell:

@@ -66,5 +66,8 @@ fi
 # Export a path to nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# Export a path to pyenv
+eval "$(pyenv init -)"
+
 # Pass the starship
 eval "$(starship init zsh)"
