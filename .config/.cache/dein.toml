@@ -1,2 +1,16 @@
+# dein本体
 [[plugins]]
 repo = 'Shougo/dein.vim'
+
+# ----------------------------------------
+#  Setting for NERDTree
+# ----------------------------------------
+    [[plugins]]
+    repo = 'scrooloose/nerdtree'
+    hook_add = '''
+        nnoremap <silent><C-n> :NERDTreeToggle<CR>
+        " ブックマークを初期表示
+        let g:NERDTreeShowBookmarks=1
+        " autocmd vimenter * NERDTree
+        " vim起動時にNERDTreeを表示
+    '''
