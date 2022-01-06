@@ -15,7 +15,7 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 " 管理するプラグインを記述したファイル
-let s:toml_dir  = expand('~/.dein/')
+let s:toml_dir  = expand('~/.config/nvim/dein/')
 let s:toml      = s:toml_dir . 'dein.toml'
 let s:toml_lazy = s:toml_dir . 'dein-lazy.toml'
 
