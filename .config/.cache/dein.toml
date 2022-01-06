@@ -11,6 +11,4 @@ repo = 'Shougo/dein.vim'
         nnoremap <silent><C-n> :NERDTreeToggle<CR>
         " ブックマークを初期表示
         let g:NERDTreeShowBookmarks=1
-        " autocmd vimenter * NERDTree
-        " vim起動時にNERDTreeを表示
     '''
