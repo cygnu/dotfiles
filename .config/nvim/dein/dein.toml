@@ -2,13 +2,15 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-# ----------------------------------------
-#  Setting for NERDTree
-# ----------------------------------------
+# vim-devicons
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+# NERDTree
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-    nnoremap <silent><C-n> :NERDTreeToggle<CR>
-    " ブックマークを初期表示
-    let g:NERDTreeShowBookmarks=1
+    nnoremap <silent><C-n> :NERDTreeToggle<CR> " Ctrl-nでファイルツリーの表示切り替え
+    let g:NERDTreeShowBookmarks=1              " ブックマークを初期表示
+    let g:webdevicons_enable_nerdtree=1        " vim-deviconsを使用
 '''
