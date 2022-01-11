@@ -10,11 +10,11 @@
     sh = stash
     st = status
 
-[colors]
+[color]
     ui = auto
 
-[editor]
-    default = nvim
+[core]
+    editor = nvim
 
 [init]
     defaultBranch = main
