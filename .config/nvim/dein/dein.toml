@@ -14,3 +14,7 @@ hook_add = '''
     let g:NERDTreeShowBookmarks=1              " ブックマークを初期表示
     let g:webdevicons_enable_nerdtree=1        " vim-deviconsを使用
 '''
+
+# カラーテーマにicebergを設定
+[[plugins]]
+repo = 'cocopon/iceberg.vim'

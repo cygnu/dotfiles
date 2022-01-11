@@ -37,7 +37,7 @@ syntax enable             " シンタックスハイライト
 
 set bg=dark
 
-" colorscheme iceberg
+colorscheme iceberg
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
